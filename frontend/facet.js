@@ -129,7 +129,7 @@ function setupFacet(container, globalQuery, name, field) {
 			
 			alert('here2');
 			alert(globalQuery.getConstraintsJSON);
-			alert(globalQuery.getConstraintsJSON());
+			alert(globalQuery.ConstraintsJSON());
 			alert(globalQuery.ConstraintsJSON);
 			
 			
