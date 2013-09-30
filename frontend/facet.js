@@ -64,12 +64,21 @@ function setupFacet(container, globalQuery, name, field) {
 	var contextQuery = new Query(globalQuery.backendUrl(), 'setminus', globalQuery, ownCnstrQuery);
 	var contextQueryResultWatcher = new ResultWatcher(function () {});
 	contextQuery.addResultWatcher(contextQueryResultWatcher);
+	
+	
+	var temp =0; // testing - Ramtin
+	
+	
+	
 	function select(value) {
 		setClearEnabled(value != null);
 		contextQueryResultWatcher.enabled(value != null);
 		selectedValue = value;
 		if (value != null) {
-			alert(name + ": " + value); // just for testing - Ramtin
+			// alert(name + ": " + value); // just for testing - Ramtin
+			temp++;
+			alert(temp + name + ": " + value); // just for testing - Ramtin
+			
 			constraint.name(name + ": " + value);
 			constraint.set({
 				type: 'fieldvalue',
