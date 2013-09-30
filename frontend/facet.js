@@ -57,10 +57,22 @@ function setupFacet(container, globalQuery, name, field) {
 	}
 
 	var selectedValue = null;
+	
 	var constraint = new Constraint();
 	globalQuery.addConstraint(constraint);
 	var ownCnstrQuery = new Query(globalQuery.backendUrl());
 	ownCnstrQuery.addConstraint(constraint);
+	
+	
+	
+	/// just for testing - Ramtin
+	var constraint2 = new Constraint();
+	globalQuery.addConstraint(constraint2);
+	ownCnstrQuery.addConstraint(constraint2);
+
+
+
+
 	var contextQuery = new Query(globalQuery.backendUrl(), 'setminus', globalQuery, ownCnstrQuery);
 	var contextQueryResultWatcher = new ResultWatcher(function () {});
 	contextQuery.addResultWatcher(contextQueryResultWatcher);
@@ -77,14 +89,37 @@ function setupFacet(container, globalQuery, name, field) {
 		if (value != null) {
 			// alert(name + ": " + value); // just for testing - Ramtin
 			temp++;
-			alert(temp + name + ": " + value); // just for testing - Ramtin
+			
+			if(temp > 1) {
+				
+				
+			constraint2.name(name + ": " + value);
+			constraint2.set({
+				type: 'fieldvalue',
+				field: field,
+				value: value
+			});
+				
+				
+				
+			} else {
+				
 			
 			constraint.name(name + ": " + value);
 			constraint.set({
 				type: 'fieldvalue',
 				field: field,
 				value: value
-			});
+			});	
+				
+				
+				
+				
+				
+			}
+			//alert(temp + name + ": " + value); // just for testing - Ramtin
+			
+			
 			//  listBoxElt.addClass('selected'); // just for testing - Ramtin
 			globalQuery.update();
 		} else {
