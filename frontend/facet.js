@@ -82,7 +82,8 @@ function setupFacet(container, globalQuery, name, field) {
 		}
 	}
 	function haveSelection() {
-		return selectedValue != null;
+		return false; ///TOOD HERE   just for testing - Ramtin
+	//	return selectedValue != null;
 	}
 
 	var curData = null;
