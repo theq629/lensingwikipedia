@@ -69,7 +69,7 @@ function setupFacet(container, globalQuery, name, field) {
 		contextQueryResultWatcher.enabled(value != null);
 		selectedValue = value;
 		if (value != null) {
-			alert(name + ": " + value); // just for testing - Ramtin
+			//alert(name + ": " + value); // just for testing - Ramtin
 			constraint.name(name + ": " + value);
 			constraint.set({
 				type: 'fieldvalue',
@@ -79,7 +79,7 @@ function setupFacet(container, globalQuery, name, field) {
 			listBoxElt.addClass('selected');
 			globalQuery.update();
 		} else {
-			listBoxElt.removeClass('selected');
+			//listBoxElt.removeClass('selected'); // just for testing - Ramtin
 		}
 	}
 	function haveSelection() {
