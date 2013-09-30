@@ -79,7 +79,7 @@ function setupFacet(container, globalQuery, name, field) {
 			listBoxElt.addClass('selected');
 			globalQuery.update();
 		} else {
-			//listBoxElt.removeClass('selected'); // just for testing - Ramtin
+			listBoxElt.removeClass('selected'); // just for testing - Ramtin
 		}
 	}
 	function haveSelection() {
