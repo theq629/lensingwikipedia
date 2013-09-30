@@ -117,11 +117,20 @@ function setupFacet(container, globalQuery, name, field) {
 				
 				
 			}
-			//alert(temp + name + ": " + value); // just for testing - Ramtin
+		
 			
-			
+		
 			//  listBoxElt.addClass('selected'); // just for testing - Ramtin
+		
+		
+		
+		
 			globalQuery.update();
+			
+			
+				alert(globalQuery.getConstraintsJSON());
+			
+			
 		} else {
 			listBoxElt.removeClass('selected'); 
 		}
