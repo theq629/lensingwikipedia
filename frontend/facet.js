@@ -127,8 +127,8 @@ function setupFacet(container, globalQuery, name, field) {
 		
 			globalQuery.update();
 			
-			
-				alert(globalQuery.getConstraintsJSON());
+			alert('here');
+			alert(globalQuery.ConstraintsJSON);
 			
 			
 		} else {
