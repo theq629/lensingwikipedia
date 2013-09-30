@@ -66,9 +66,9 @@ function setupFacet(container, globalQuery, name, field) {
 	
 	
 	/// just for testing - Ramtin
-	var constraint2 = new Constraint();
-	globalQuery.addConstraint(constraint2);
-	ownCnstrQuery.addConstraint(constraint2);
+	// var constraint2 = new Constraint();
+	// globalQuery.addConstraint(constraint2);
+	// ownCnstrQuery.addConstraint(constraint2);
 
 
 
@@ -78,7 +78,7 @@ function setupFacet(container, globalQuery, name, field) {
 	contextQuery.addResultWatcher(contextQueryResultWatcher);
 	
 	
-	var temp =0; // testing - Ramtin
+	// var temp =0; // testing - Ramtin
 	
 	
 	
@@ -88,21 +88,21 @@ function setupFacet(container, globalQuery, name, field) {
 		selectedValue = value;
 		if (value != null) {
 			// alert(name + ": " + value); // just for testing - Ramtin
-			temp++;
+			// temp++;
 			
-			if(temp > 1) {
+			// if(temp > 1) {
 				
 				
-			constraint2.name(name + ": " + value);
-			constraint2.set({
-				type: 'fieldvalue',
-				field: field,
-				value: value
-			});
+			// constraint2.name(name + ": " + value);
+			// constraint2.set({
+			// 	type: 'fieldvalue',
+			// 	field: field,
+			// 	value: value
+			// });
 				
 				
 				
-			} else {
+			// } else {
 				
 			
 			constraint.name(name + ": " + value);
@@ -116,7 +116,7 @@ function setupFacet(container, globalQuery, name, field) {
 				
 				
 				
-			}
+			// }
 		
 			
 		
@@ -127,10 +127,10 @@ function setupFacet(container, globalQuery, name, field) {
 		
 			globalQuery.update();
 			
-			alert('here2');
-			alert(globalQuery.getConstraintsJSON);
-			alert(globalQuery.ConstraintsJSON());
-			alert(globalQuery.ConstraintsJSON);
+			// alert('here2');
+			// alert(globalQuery.getConstraintsJSON);
+			// alert(globalQuery.ConstraintsJSON());
+			// alert(globalQuery.ConstraintsJSON);
 			
 			
 		} else {
