@@ -69,7 +69,7 @@ function setupFacet(container, globalQuery, name, field) {
 		contextQueryResultWatcher.enabled(value != null);
 		selectedValue = value;
 		if (value != null) {
-			
+			alert(name + ": " + value); // just for testing - Ramtin
 			constraint.name(name + ": " + value);
 			constraint.set({
 				type: 'fieldvalue',
