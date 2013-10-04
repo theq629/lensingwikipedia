@@ -59,11 +59,11 @@ function setupFacet(container, globalQuery, name, field) {
 	var selectedValue = null;
 	
 	
-	/// comented temporary;
-	// var constraint = new Constraint();
-	// globalQuery.addConstraint(constraint);
-	// var ownCnstrQuery = new Query(globalQuery.backendUrl());
-	// ownCnstrQuery.addConstraint(constraint);
+
+	 var constraint = new Constraint();
+	 globalQuery.addConstraint(constraint);
+	 var ownCnstrQuery = new Query(globalQuery.backendUrl());
+	 ownCnstrQuery.addConstraint(constraint);
 	
 	
 
@@ -83,35 +83,19 @@ function setupFacet(container, globalQuery, name, field) {
 			// alert(name + ": " + value); // just for testing - Ramtin
 			
 
-				var constraint = new Constraint();
-				
-				
-				
-					constraint.name(name + ": " + value);
-						constraint.set({
-						type: 'fieldvalue',
-						field: field,
-						value: value
-					});	
-				
-				
-				
-				globalQuery.addConstraint(constraint);
-				var ownCnstrQuery = new Query(globalQuery.backendUrl());
-				ownCnstrQuery.addConstraint(constraint);
-	
+			
 			
 			
 			
 
 				
 			
-			// constraint.name(name + ": " + value);
-			// constraint.set({
-			// 	type: 'fieldvalue',
-			// 	field: field,
-			// 	value: value
-			// });	
+			 constraint.name(name + ": " + value);
+			 constraint.set({
+			 	type: 'fieldvalue',
+			 	field: field,
+			 	value: value
+			 });	
 				
 				
 		
