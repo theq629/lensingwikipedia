@@ -70,7 +70,9 @@ function setupFacet(container, globalQuery, name, field) {
 	var contextQueryResultWatcher = new ResultWatcher(function () {});
 	contextQuery.addResultWatcher(contextQueryResultWatcher);
 	
-
+	
+	
+	var constrains = [ ];
 	
 	
 	function select(value) {
@@ -86,13 +88,20 @@ function setupFacet(container, globalQuery, name, field) {
 			 globalQuery.addConstraint(constraint2);
 			 //var ownCnstrQuery = new Query(globalQuery.backendUrl());
 			 ownCnstrQuery.addConstraint(constraint2);
-	
+			constrainsID.
+			
+			
+		
 			constraint2.name(name + ": " + value);
 			 constraint2.set({
 			 	type: 'fieldvalue',
 			 	field: field,
 			 	value: value
 			 });
+			 
+			constrains.push({
+			    constraint2.name : constrains2 ;
+			});
 	
 	
 	
@@ -179,18 +188,11 @@ function setupFacet(container, globalQuery, name, field) {
 					// clearing
 					
 					
-							
-					 var constraint2 = new Constraint();
-					 
-					constraint2.name(name + ": " + value);
-					 constraint2.set({
-					 	type: 'fieldvalue',
-					 	field: field,
-					 	value: value
-					 });
-					 globalQuery.removeConstraint(constraint2);
+					
+				
+					 globalQuery.removeConstraint(constrains[name + ": " + value]);
 					 //var ownCnstrQuery = new Query(globalQuery.backendUrl());
-					 ownCnstrQuery.removeConstraint(constraint2);
+					 ownCnstrQuery.removeConstraint(constrains[name + ": " + value]);
 			
 	
 					
