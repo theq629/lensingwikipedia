@@ -150,10 +150,44 @@ function setupFacet(container, globalQuery, name, field) {
 			var classStr = value == selectedValue ? " class=\"selected\"" : "";
 			var bracketedCountStr =  count == null ? "" : " [" + count + "]";
 			var countStr =  count == null ? "no" : count;
-			var itemElt = $("<li" + classStr + " title=\"Value '" + value + "' is in " + countStr + " events under current constraints. Click to select it.\">" + value + bracketedCountStr + "</li>").appendTo(listElt);
+			
+			
+			
+			
+			
+			// var itemElt = $("<li" + classStr + " title=\"Value '" + value + "' is in " + countStr + " events under current constraints. Click to select it.\">" + value + bracketedCountStr + "</li>").appendTo(listElt);
+			// itemElt.click(function() {
+			// 	select(value);
+			// });
+			
+			
+			
+			var itemElt = $("<li" + classStr + " title=\"Value '" + value + "' is in " + countStr + " events under current constraints. Click to select it.\">" + value + bracketedCountStr + "</li>");
+			
+			var checkitem = $("<input type=\"checkbox\" name=\"value\">").appendTo(itemElt);
+			checkitem.click(function() {
+				select(value);
+			});
+			
+			itemElt.appendTo(listElt);
 			itemElt.click(function() {
 				select(value);
 			});
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 		curData = data;
 		searchInputElt.val("");
