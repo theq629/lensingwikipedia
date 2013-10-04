@@ -88,21 +88,30 @@ function setupFacet(container, globalQuery, name, field) {
 		selectedValue = value;
 		if (value != null) {
 			// alert(name + ": " + value); // just for testing - Ramtin
-			// temp++;
 			
-			// if(temp > 1) {
+			
+			
+			
+			
+			 temp++;
+			
+			if(temp > 1) {
 				
 				
-			// constraint2.name(name + ": " + value);
-			// constraint2.set({
-			// 	type: 'fieldvalue',
-			// 	field: field,
-			// 	value: value
-			// });
+			constraint2.name(name + ": " + value);
+			constraint2.set({
+				type: 'fieldvalue',
+				field: field,
+				value: value
+			 });
 				
 				
 				
-			// } else {
+			 } else {
+			
+			
+			
+			
 				
 			
 			constraint.name(name + ": " + value);
@@ -116,11 +125,11 @@ function setupFacet(container, globalQuery, name, field) {
 				
 				
 				
-			// }
+			}
 		
 			
 		
-			//  listBoxElt.addClass('selected'); // just for testing - Ramtin
+			 listBoxElt.addClass('selected'); // just for testing - Ramtin
 		
 		
 		
