@@ -172,7 +172,18 @@ function setupFacet(container, globalQuery, name, field) {
 			
 			itemElt.appendTo(listElt);
 			itemElt.click(function() {
-				select(value);
+				
+				if (itemElt.hasClass('selected')){
+					itemElt.removeClass('selected');
+					
+					// clearing
+					
+				}else {
+					itemElt.addClass('selected');
+					select(value);	
+				}
+				
+			
 			});
 			
 			
