@@ -187,9 +187,9 @@ function setupFacet(container, globalQuery, name, field) {
 					
 					
 				
-					 //globalQuery.removeConstraint(constrains[name + ": " + value]);
-					 ////var ownCnstrQuery = new Query(globalQuery.backendUrl());
-					 //ownCnstrQuery.removeConstraint(constrains[name + ": " + value]);
+					 globalQuery.removeConstraint(constrains[name + ": " + value]);
+					 //var ownCnstrQuery = new Query(globalQuery.backendUrl());
+					 ownCnstrQuery.removeConstraint(constrains[name + ": " + value]);
 			
 	
 					
