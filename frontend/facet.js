@@ -88,9 +88,6 @@ function setupFacet(container, globalQuery, name, field) {
 			 globalQuery.addConstraint(constraint2);
 			 //var ownCnstrQuery = new Query(globalQuery.backendUrl());
 			 ownCnstrQuery.addConstraint(constraint2);
-			constrainsID.
-			
-			
 		
 			constraint2.name(name + ": " + value);
 			 constraint2.set({
