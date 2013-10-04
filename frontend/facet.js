@@ -72,7 +72,7 @@ function setupFacet(container, globalQuery, name, field) {
 	
 	
 	
-//	var constrains = [ ];
+	var constrains = [ ];
 	
 	
 	function select(value) {
@@ -96,9 +96,9 @@ function setupFacet(container, globalQuery, name, field) {
 			 	value: value
 			 });
 			 
-			// constrains.push({
-			//     constraint2.name : constrains2
-			// });
+			 constrains.push({
+			    constraint2.name : constraint2
+			});
 	
 	
 	
