@@ -175,8 +175,26 @@ function setupFacet(container, globalQuery, name, field) {
 				
 				if (itemElt.hasClass('selected')){
 					itemElt.removeClass('selected');
-					
+				//	removeConstraintElement(cnstr)
 					// clearing
+					
+					
+							
+					 var constraint2 = new Constraint();
+					 
+					constraint2.name(name + ": " + value);
+					 constraint2.set({
+					 	type: 'fieldvalue',
+					 	field: field,
+					 	value: value
+					 });
+					 globalQuery.removeConstraint(constraint2);
+					 //var ownCnstrQuery = new Query(globalQuery.backendUrl());
+					 ownCnstrQuery.removeConstraint(constraint2);
+			
+	
+					
+					
 					
 				}else {
 					itemElt.addClass('selected');
