@@ -124,7 +124,7 @@ function setupFacet(container, globalQuery, name, field) {
 			
 			
 		} else {
-			listBoxElt.removeClass('selected'); 
+			//listBoxElt.removeClass('selected'); 
 		}
 	}
 	function haveSelection() {
