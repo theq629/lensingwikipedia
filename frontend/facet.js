@@ -72,7 +72,7 @@ function setupFacet(container, globalQuery, name, field) {
 	
 	
 	
-	var constrains = [ ];
+//	var constrains = [ ];
 	
 	
 	function select(value) {
@@ -96,9 +96,9 @@ function setupFacet(container, globalQuery, name, field) {
 			 	value: value
 			 });
 			 
-			constrains.push({
-			    constraint2.name : constrains2
-			});
+			// constrains.push({
+			//     constraint2.name : constrains2
+			// });
 	
 	
 	
@@ -187,9 +187,9 @@ function setupFacet(container, globalQuery, name, field) {
 					
 					
 				
-					 globalQuery.removeConstraint(constrains[name + ": " + value]);
-					 //var ownCnstrQuery = new Query(globalQuery.backendUrl());
-					 ownCnstrQuery.removeConstraint(constrains[name + ": " + value]);
+					 //globalQuery.removeConstraint(constrains[name + ": " + value]);
+					 ////var ownCnstrQuery = new Query(globalQuery.backendUrl());
+					 //ownCnstrQuery.removeConstraint(constrains[name + ": " + value]);
 			
 	
 					
