@@ -58,28 +58,21 @@ function setupFacet(container, globalQuery, name, field) {
 
 	var selectedValue = null;
 	
-	var constraint = new Constraint();
-	globalQuery.addConstraint(constraint);
-	var ownCnstrQuery = new Query(globalQuery.backendUrl());
-	ownCnstrQuery.addConstraint(constraint);
+	
+	/// comented temporary;
+	// var constraint = new Constraint();
+	// globalQuery.addConstraint(constraint);
+	// var ownCnstrQuery = new Query(globalQuery.backendUrl());
+	// ownCnstrQuery.addConstraint(constraint);
 	
 	
-	
-	/// just for testing - Ramtin
-	// var constraint2 = new Constraint();
-	// globalQuery.addConstraint(constraint2);
-	// ownCnstrQuery.addConstraint(constraint2);
-
-
 
 
 	var contextQuery = new Query(globalQuery.backendUrl(), 'setminus', globalQuery, ownCnstrQuery);
 	var contextQueryResultWatcher = new ResultWatcher(function () {});
 	contextQuery.addResultWatcher(contextQueryResultWatcher);
 	
-	
-	// var temp =0; // testing - Ramtin
-	
+
 	
 	
 	function select(value) {
@@ -89,57 +82,47 @@ function setupFacet(container, globalQuery, name, field) {
 		if (value != null) {
 			// alert(name + ": " + value); // just for testing - Ramtin
 			
+
+				var constraint = new Constraint();
+				
+				
+				
+					constraint.name(name + ": " + value);
+						constraint.set({
+						type: 'fieldvalue',
+						field: field,
+						value: value
+					});	
+				
+				
+				
+				globalQuery.addConstraint(constraint);
+				var ownCnstrQuery = new Query(globalQuery.backendUrl());
+				ownCnstrQuery.addConstraint(constraint);
+	
 			
 			
 			
-			
-			 temp++;
-			
-			if(temp > 1) {
-				
-				
-			constraint2.name(name + ": " + value);
-			constraint2.set({
-				type: 'fieldvalue',
-				field: field,
-				value: value
-			 });
-				
-				
-				
-			 } else {
-			
-			
-			
-			
+
 				
 			
-			constraint.name(name + ": " + value);
-			constraint.set({
-				type: 'fieldvalue',
-				field: field,
-				value: value
-			});	
+			// constraint.name(name + ": " + value);
+			// constraint.set({
+			// 	type: 'fieldvalue',
+			// 	field: field,
+			// 	value: value
+			// });	
 				
 				
-				
-				
-				
-			}
 		
 			
 		
-			 listBoxElt.addClass('selected'); // just for testing - Ramtin
+			 listBoxElt.addClass('selected'); 
 		
 		
 		
 		
 			globalQuery.update();
-			
-			// alert('here2');
-			// alert(globalQuery.getConstraintsJSON);
-			// alert(globalQuery.ConstraintsJSON());
-			// alert(globalQuery.ConstraintsJSON);
 			
 			
 		} else {
