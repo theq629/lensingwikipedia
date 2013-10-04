@@ -164,10 +164,11 @@ function setupFacet(container, globalQuery, name, field) {
 			
 			var itemElt = $("<li" + classStr + " title=\"Value '" + value + "' is in " + countStr + " events under current constraints. Click to select it.\">" + value + bracketedCountStr + "</li>");
 			
-			var checkitem = $("<input type=\"checkbox\" name=\"value\">").appendTo(itemElt);
-			checkitem.click(function() {
-				select(value);
-			});
+			// var checkItem = $("<input type=\"checkbox\" name=\"value\" align=\"right\"> ").appendTo(itemElt);
+			// checkItem.click(function() {
+			// 	checkItem.checked = true;
+			// 	select(value);
+			// });
 			
 			itemElt.appendTo(listElt);
 			itemElt.click(function() {
