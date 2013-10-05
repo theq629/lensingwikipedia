@@ -97,7 +97,7 @@ function setupFacet(container, globalQuery, name, field) {
 			 });
 			 
 			 constrains.push({
-			    name : constraint2
+			    name + ": " + value : constraint2
 			});
 	
 	
