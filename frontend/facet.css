@@ -55,7 +55,7 @@
 }
 .facet .listbox.selected {
 	background-color: rgba(58, 135, 173, 0.5);
-	list-style-image:url('checkmark_icon.png');
+	list-style-image:url('http://images.sodahead.com/polls/000713948/polls_600px_Blue_check.svg_0145_710456_answer_1_small.png');
 }
 
 .facet .listbox ul {
