@@ -55,6 +55,7 @@
 }
 .facet .listbox.selected {
 	background-color: rgba(58, 135, 173, 0.5);
+	list-style-image:url('checkmark_icon.png');
 }
 
 .facet .listbox ul {
